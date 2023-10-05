@@ -1,0 +1,21 @@
+get
+/api/sensor/get
+
+post
+/api/sensor/create
+Modelo sin id
+
+put
+/api/sensor/update/_id
+Modelo con id
+
+delete
+/api/sensor/delete/_id
+ID
+
+
+Modelo
+_id: tipo ID
+name: {type:String, required: true},
+desc: {type:String, required: true},
+status: {type:Boolean, default: false}

@@ -1,18 +1,18 @@
 import express from "express"
+import "./config/database.js"
 import cors from "cors"
-import indexRouter from "./routers/indexRouter.js"
 import notFoundHandler from "./middlewares/notFoundHandler.js"
 import errorHandler from "./middlewares/errorHandler.js"
 import 'dotenv/config.js'
+import indexRouter from "./Routers/IndexRouter.js"
 
 const app = express()
-const PORT = 3000
 
 app.use(cors())
 
 app.get("/", (req, res, next)=>{
     res.json({
-        response: "Bienvenido a la API de ESP32 desde /",
+        response: "Bienvenido a la API de ESP-32 desde /",
         success: true,
         error: false
     })
