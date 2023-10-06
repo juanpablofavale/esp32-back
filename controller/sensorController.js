@@ -4,7 +4,7 @@ const sensorController = {
     getAll: async (req, res, next) => {
         try {
             const response = await Sensor.find()
-            res.status(200).json({response})
+            res.json({response})
         } catch (er) {
             next(er)
         }
