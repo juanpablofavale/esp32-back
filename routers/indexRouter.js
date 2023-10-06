@@ -1,5 +1,6 @@
 import { Router } from "express";
 import sensorRouter from "./sensorRouter.js";
+import indexPut from "./indexPut.js";
 
 const indexRouter = Router()
 
@@ -12,5 +13,9 @@ indexRouter.get('/', (req, res, next)=>{
 })
 
 indexRouter.use("/sensor", sensorRouter)
+
+//Router creado para actualizar la base de datos
+//En este caso agrego el pin del sensor
+//indexRouter.use('/put', indexPut)
 
 export default indexRouter
