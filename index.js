@@ -4,11 +4,12 @@ import cors from "cors"
 import notFoundHandler from "./middlewares/notFoundHandler.js"
 import errorHandler from "./middlewares/errorHandler.js"
 import 'dotenv/config.js'
-import indexRouter from "./Routers/IndexRouter.js"
+import indexRouter from "./routers/indexRouter.js"
 
 const app = express()
 
 app.use(cors())
+app.use(express.json())
 
 app.get("/", (req, res, next)=>{
     res.json({

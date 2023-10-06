@@ -1,4 +1,5 @@
 import { Router } from "express";
+import sensorRouter from "./sensorRouter.js";
 
 const indexRouter = Router()
 
@@ -9,5 +10,7 @@ indexRouter.get('/', (req, res, next)=>{
         error: false
     })
 })
+
+indexRouter.use("/sensor", sensorRouter)
 
 export default indexRouter
