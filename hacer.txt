@@ -1,21 +1,52 @@
-get
+**************************
+Obtener Todos los Sensores
+
+getAll
 /api/sensor/get
 
-post
-/api/sensor/create
-Modelo sin id
+**************************
+Obtener un Sensor
 
-put
-/api/sensor/update/_id
-Modelo con id
+getOne
+/api/sensor/get/_id
 
-delete
-/api/sensor/delete/_id
+datos a enviar:
 ID
 
+**************************
+Crear un Sensor
+
+postOne
+/api/sensor/create
+
+datos a enviar:
+Modelo
+
+**************************
+Modificar un Sensor
+
+putOne
+/api/sensor/update/_id
+
+datos a enviar:
+Modelo con id
+
+**************************
+Borrar un Sensor
+
+deleteOne
+/api/sensor/delete/_id
+
+datos a enviar:
+ID
+
+*************************
 
 Modelo
-_id: tipo ID
-name: {type:String, required: true},
-desc: {type:String, required: true},
-status: {type:Boolean, default: false}
+name: String, required: true
+desc: String, required: true
+pin: Number, required: true
+state: Number, default: 0 - entre 0 y 1
+
+El envio de modelo se hace en el cuerpo de la peticion
+El envio del id se hace en la barra de direcciones como query param
